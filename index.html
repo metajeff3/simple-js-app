@@ -1,5 +1,33 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeff's Pokédex</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+<body>
+  <header>
+    <h1>Jeff's Pokédex</h1>
+  </header>
+
+  <main>
+    <ul id="pokemon-list" class="pokemon-list">
+      <!-- Pokémon buttons will be injected here by JavaScript -->
+    </ul>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal-container" class="modal hidden">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close">×</button>
+      <h2 id="modal-name"></h2>
+      <img id="modal-image" src="" alt="Pokémon image">
+      <p><strong>Height:</strong> <span id="modal-height"></span></p>
+      <p><strong>Types:</strong> <span id="modal-types"></span></p>
+    </div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

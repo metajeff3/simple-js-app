@@ -173,7 +173,7 @@ function showModal(title,height, img, weight, types) {
       loadDetails: loadDetails
     };
 
-    */
+    
 })();
 
 /*
