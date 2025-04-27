@@ -143,3 +143,24 @@ modalContainer.addEventListener("click", (e) => {
     modalContainer.classList.add("hidden");
   }
 });
+
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('search-input');
+  const pokemonListElement = document.querySelector('.pokemon-list');
+
+  searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const listItems = pokemonListElement.getElementsByTagName('li');
+
+    Array.from(listItems).forEach((item) => {
+      const button = item.querySelector('button');
+      const pokemonName = button.textContent.toLowerCase();
+      if (pokemonName.includes(searchTerm)) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
